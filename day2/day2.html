@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="alert('hi')">click me</button>
+    <!-- 
+
+    intro javascript
+    javascript 
+    versions
+    history
+    what is js
+    how it works
+    event loop 
+
+
+    how to integrate html with js
+    1) inline- defining within the element using onclick  attribute
+              we can define function names and single line codes
+
+     <button onclick="alert('hello js') "></button>
+
+    2) internal
+    <script>
+        write the js code
+        console.log('hello world')
+    </script>  at the bottom before closing tag of body
+
+    open with live server- ctrl shift j ---console
+
+    3) external
+       create a file with .js extension
+       we can link the file using
+       <script src='demo.js'></script>
+
+       variables 
+       varaibles are containers for storing data and that 
+       data could be anything
+
+       variables are defined with var , let or const keyword
+       followed by variable name (identifier)  , we can assign value
+       with = operator
+
+       var a=10
+       let b=20
+       const c=30
+
+       identifier rules 
+    1 . it contain numbers , letters ,special characters but it 
+           should start with _ ,letter , $
+    2   . we cannot use reserved words as a names
+    3 . variables are case sensitive 
+    4. we cannot include spaces 
+    
+
+    conventions
+    1)variable declaration- it a process of defining a variable in an 
+                        environment
+    var a;
+
+    2)undefined - variable without an value
+    console.log(a)
+
+    3)not defined - it is a error that encounter when u console
+                 an unexisitng  variable
+    console.log(b)
+
+    4) assignment -it is process of assigning an value after the declartion
+    var b;
+    b=2;
+
+    5) re assignemt 
+    var c;
+    c=10;
+    c=20;
+
+    6) intialiazation: it a process of defining an varaible and assigning
+    a value at the same line
+    var d=20;
+
+    7) hoisting 
+    it is a behaviour where the decalaration of the
+    variables and functions are moved to top even
+    before the execution
+
+
+    data types 
+    primitive datatypes
+    1. we can store single values
+    2. primitive datatypes are immutable
+    3. it alwyas stores in stack
+    4. can get by value and pass by value
+
+    non primitive datatypes
+    1. we can store multiple values
+    2. mutable
+    3. it always stores in heap
+    4.can get by refernce and pass by reference
+
+    primitive datatypes
+    1) strings- it is used to store collection of characters in single
+    or double quotes
+
+    2) number - postive or negative or decimal 
+
+    3) boolean - true and false
+                 1          0
+    4) undefined - variable without an value
+
+    5) null - intentional absence of an value
+    var a=null
+
+    non primitive data types
+    1 - array- collection of mutliple values which are might be homo
+    or hetero
+    can be accessed using numbered index
+    var arr=[1,2,"hello"]
+
+
+    arr=[1,25,3]
+    2. object - it is a collection of data in key value pairs
+    var obj= {
+    id: 1,
+    age:25,
+    batchNo: 3,
+    skill: 'frontend'
+    }
+    object values are accesed by named index
+
+    3. functions -it is a reusable block of code 
+    that is used to perform specfic task
+    function greet(){
+    console.log('hello')
+    }
+    greet()
+
+
+
+
+    
+    -->
+    
+
+
+    <script src="demo.js"></script>
+   <script>
+    // // write the js code
+    // console.log('welcome to js class');
+    // console.log('hello world')
+//  single line comments
+// /**/ multi line comment
+
+//   var a=10
+//   var a1=20
+//   var $a2=20
+//   var _a3=20
+//   var A=20
+//   var fullName='teja'
+//   console.log(a)
+
+// not defined
+// console.log(a)
+
+//undefined
+// var a;
+// console.log(a)
+
+// console.log(b)
+// var b=20;
+// console.log(b)
+
+var a={
+    name:'teja',
+    age:27
+}
+
+
+a.name='john'
+
+
+
+
+console.log(a.name)
+console.log(a['name'])
+console.log(a)
+
+   </script> 
+</body>
+</html>
