@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <!-- 
+    conditional statements
+    switch case
+    loop
+
+
+    for loop
+    it is used to repeat a block of code fixed number of times
+    depends on a counter iteration
+
+    for (initialization; condition; updation){
+        //code to be executed
+    }
+        ini
+        cond
+        code
+        updation
+        condition
+        code 
+        updation
+
+
+
+
+// break and continue
+//break is used to terminate the loop 
+//it is mostly used to control the flow of the program
+// for (var i =1;i<10;i++){
+//       if (i==5){
+//         continue
+//     }
+//     console.log(i)
+ 
+// }
+// continue
+// continue is used to skip the current iteration
+// of the loope and moves control to the next iteration
+
+// nested loop
+ 
+//  for (var i=1;i<=5;i++){
+//      console.log(i, "oouter loop")
+//      for (var j=1;j<=10;j++){
+//          console.log(j,'inner loop')
+//          if (j==3){
+//              break
+//          }
+//      }
+//  }
+ 
+ 
+//  for (var i=1;i<=5;i++){
+//  for (var j=1;j<=10;j++){
+//      console.log(i,"*", j,"=",j*i)
+//  }
+//  console.log("next one")
+//  }
+
+// while loop - it is used to execute a block of
+// code until the condition is true
+// it is event controlled loop
+// it is used when we dont know the no of iteration
+// syntax
+// initialization
+// while (condtioion){
+//     code
+//     updation
+// }
+
+// var a=1
+// while(a<10){
+//     console.log(a)
+//     a++
+// }
+
+var answer='yes'
+
+// while (true){
+//     reply=prompt('enter ur reply')
+//     console.log("proposed")
+//     if (reply==answer){
+//         console.log("success")
+//         break
+//     }
+// }
+
+// while  (true){
+//     order =prompt("enter ur order items")
+//     if (order=='done'){
+//         break
+//     }
+//     console.log('placed an',order)
+// }
+
+// do while loop 
+
+// it will execute the block of code one time 
+// even the condtion is false
+
+// syntax
+// initializaion
+// do{
+//     code
+//     updation
+// }while(conditon)
+// var i=1
+// do {
+//     console.log(i)
+//     i++
+// }
+// while(i>10)
+
+// for in loop
+// it is used to iterate the iterable objects
+// keys, indexes and also values
+obj={
+    name:'john',
+    age:25,
+    city:'hyd'
+}
+for (i in obj){
+    // console.log(i)....index of string
+    // console.log(str[i])...value of string
+    // console.log(i)....index of array
+    // console.log(arr[i])....values of an array
+    // console.log(i)...keys of an object
+    // console.log(obj[i])....values of an object
+}
+// for of loop
+// it is used to iterate the values of strings
+// and arrays
+// str='helloworld'
+// arr=['html','css','js']
+// for(i of Object.keys(obj)){
+//     console.log(i)
+// }
+
+password='1234'
+attempt=0
+
+// while (true){
+//     inp=prompt("enter ur password")
+//     if (inp==password){
+//         console.log("granted")
+//         break
+//     }else{
+//         attempt++
+//         if (attempt==3){
+//             console.log("try after 24hours, card is blocked")
+//             break;
+//         }
+//     }
+// }
+var data =[
+    {
+        product:12,
+        status:'expired'
+    },
+    {
+        product:55,
+        status:'not expired'
+    },
+    {
+        product:32,
+        status:'expired'
+    },
+    {
+        product:52,
+        status:'not expired'
+    },
+    ]
+    
+    for (var i of data){
+        if (i.status=='expired'){
+            continue
+        }
+        console.log(i.product)
+    }
+
+
+
+ 
+ 
+ 
+
+
+
+
+
+
+
+    
+    -->
+    
+</body>
+</html>
