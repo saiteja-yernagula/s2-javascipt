@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /*
+
+
+        functions
+        it is piece of reusable block of code
+        that is used to perform specific task
+        when something is called or invoked
+
+        functions are defined with function keyword followed by
+        function name followed by parenthesis followed by  curly braces
+        {/code to be executed}
+
+        //function declaration
+        function  funname(){
+        //code to be executed
+        }
+
+        //function invoking or calling
+        funname()
+
+        key points in functions
+        1. function name stores function defintion
+        2. consoling the function name wil give you the return value
+        3. statement after return will not execute 
+        4. named function can only be hoisted
+        5. in js function definition can act as a value - first 
+        class functions- it can assigned to an varibe - it can be passed
+        to another function as a argument
+        
+
+        paranthesis may include parameter in defintion
+        and
+        argument - arguments are the values that are passed to the function
+        while calling 
+        it behaves local variables
+
+       types of functions
+       1. named function
+       2. anonymous function
+           a function that is defined without a function name
+
+           function(){
+           console.log('hello')
+           }
+        3. arrow function- 
+        it is a more concise way of writing a function in 
+        simple syntax - mostly used for single line operations
+         function funname (){
+           console.log('hello')
+           }
+
+          var a= (b,c)=>{
+           console.log(b)
+           return c
+           }
+        a(10,20)
+
+eliminate () if we have single parmam
+          var a= b=>{
+           console.log(b)
+           return b
+           }
+        console.log(a(10,20))
+
+eliminate {} if we have a single statement
+ var a= b=>console.log(b) 
+        a(10)
+    
+callback function
+callback function is when a function definition passed to another function
+as an argument  and later it will be executed on the outer function
+
+function outer(a){
+console.log('outer')
+console.log(a)
+}
+
+function inner(){
+console.log('inner')
+}
+
+outer(inner)
+
+higher order function
+it is function that takes one or more functions as an arguments
+hof(callback,callback2,callback)
+
+
+
+        
+        */
+    //    function greet(){
+    //        console.log("hello world")
+    //        return 0
+    //        console.log("hello world")
+    //     }
+        
+        // greet()
+
+        // function btn(){
+        //     console.log(1,'is clicked')
+        // }
+        // btn()
+        // btn()
+        // btn()
+
+        // function btnn(num){
+        //     console.log(num,'is clicked')
+        // }
+
+        // btnn(2)
+        // btnn(3)
+        // btnn(4)
+
+        // function greet(nm='dear'){
+        //     console.log('welcome to our web page mr.' , nm)
+
+        // }
+        // greet('john')
+        // greet('jenny')
+        // greet()
+
+        // function one(){
+        //     var a=10+20+39
+        //     return a
+        // }
+
+        // function two(){
+        //     var b=20+3
+        //     return b
+        // }
+    
+        // console.log(one()+two())
+
+      
+    
+        
+        // var a=   function (){
+        //     console.log('hello world')
+        // }
+        // a()
+
+
+        //  var a= b=>console.log(b)
+           
+        // a(10)
+//  function outer(a){
+// console.log('outer')
+// a()
+// }
+
+// function inner(){
+// console.log('inner')
+// }
+
+// outer(inner)
+function payment(b){
+    console.log('payment completed')
+    b()
+    
+}
+
+function cart(a){
+    console.log('products are added to cart')
+    a(order)
+}
+
+function order(){
+    console.log('order placed')
+}
+
+cart(payment)
+hof(callback)
+
+
+
+        
+
+        
+       
+        
+    </script>
+    
+</body>
+</html>
