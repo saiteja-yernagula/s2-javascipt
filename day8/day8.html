@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <h1>heading content 1</h1>
+    <h1 id="demo">heading content2</h1>
+    <h1>heading content </h1>
+    <h1 class="el">heading content4</h1>
+    <h1>heading content</h1>
+    <h1>heading content</h1>
+    <h1>heading content</h1>
+    <h1>heading content</h1>
+    <h1>heading content</h1>
+    <h1>heading content</h1>
+
+   <div class="el">div content</div>
+   <div class="el">div content</div>
+   <div class="el">div content</div>
+   <div class="el">div content</div>
+   <div class="el">div content</div>
+   <div class="el">div content</div>
+   <div class="el">div content</div>
+   <div class="el">div content</div>
+   <div class="el">div content</div>
+   <div class="el">div content</div>     
+   
+   
+   - 
+
+
+
+
+
+
+
+
+
+
+
+    <script>
+        /*
+
+        scopes
+        var let const
+
+
+        scope chaining
+        wheneever we declare a variable it will look into the current
+        scope then parent scope then till global scope
+        if not found then it will throw the error
+
+        let a=10
+        function greet(){
+            let a=20
+            {
+                let a=30;
+                console.log(a)
+            }
+        }
+        greet()
+
+        closure
+        when a inner function can accces and  remember  the varisble
+        value ever after the execution of the outer function 
+        it is called closure
+        function outer(){
+            let count=0
+            console.log('outer fun');
+            return function (){
+                count++
+                console.log(count)
+            }
+        }
+        // outer()()
+        // outer()()
+        a=outer()
+        a()
+        a()
+
+        global execution context
+        
+        */
+
+// debugger;
+//         var a=10
+
+//         let b=20
+
+//         function afun(){
+//             var c=20
+//             console.log(c)
+            
+//         }
+//         afun()
+        
+
+/*
+dom - document object model
+it is a standard object model that allowes to programs and scripts
+to access and update the content, styles and structure of an webpage
+it connect scripts to the webpage
+it represents the document in tree like structure 
+it has methods for accessing and  properties for manipulating
+
+console.log(document)//this will get the whole element in a doc
+
+two types of objects
+1.document level objects
+2. element level objects
+
+
+how to access elements
+methods
+1.document.getElementsByTagName('tagname')- which comes in a collection
+         of an array and can be accessed by indexing
+var a=document.getElementsByTagName('h1')
+console.log(a[0])   
+
+2. document.getElementsByClassName('el')- which comes in a collection
+         of an array and can be accesed by indexing
+         var a=document.getElementsByClassName('el')
+console.log(a)
+console.log(a[0])
+
+3. docuement.getElementById('demo')- which is used to get the unique 
+     element
+     var a=document.getElementById('demo')
+console.log(a)
+
+4. document.querySelector('#demo ' or '.demo' or 'h1')-it is used to
+select the first precedence of what we had mentioned
+var a=document.querySelector('.el')
+console.log(a)
+
+5. docuement.querySelectorAll('#demo ' or '.demo' or 'h1')- which
+always comes in collection
+
+var a=document.querySelectorAll('.el')
+console.log(a)
+console.log(a[0])
+
+how to access content
+properties
+innerText
+innerHTML
+textContent
+//in single element
+var a=document.querySelector('div')
+console.log(a.innerText)
+
+//in collection
+var a=document.querySelectorAll('.el')
+console.log(a);
+console.log(a[1])
+console.log(a[1].innerText)
+console.log(a[1].innerHTML)
+console.log(a[1].textContent)
+
+how to modify the content
+
+var a=document.querySelectorAll('.el')
+a[1].innertext='hello world'
+a[0].innerHTML='<u>hello world</u>';
+
+how to apply styles
+
+method.style.property='value'
+
+var a=document.getElementsByClassName('el')
+a.style.color='red';
+a.style.backgrounColor='yellow';
+
+
+
+
+*/
+// console.log(document)
+
+var a=document.querySelectorAll('.el')
+
+a[1].innertext='hello world'
+a[0].innerHTML='<u>hello world</u>';
+console.log(a[0].innerText);
+console.log(a[0].innerText);
+
+
+var a=document.getElementsByClassName('el')
+a[0].style.color='red';
+a[0].style.backgroundColor='yellow';
+
+
+
+
+
+    </script>
+    
+</body>
+</html>
