@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .parent{
+            display: flex;
+            gap:20px;
+        }
+        .child{
+            background-color: orange;
+            height:300px;
+            width:30%;
+            list-style-type: none;
+        }
+
+        img{
+            width: 300px;
+            height: 400px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>hello world</h1>
+    <button onclick="hello()">click to change</button>
+
+    <img src="https://media.geeksforgeeks.org/wp-content/uploads/20240703165023/Frontend-Development-(1).webp" alt="">
+
+
+    <button onclick="one()">html</button>
+    <button onclick="two()">css</button>
+    <button onclick="three()">js
+    </button>
+
+
+    <button onclick="btncolor()">click to change</button>
+   
+
+    
+    <script>
+        /*
+        dom 
+
+        two types of object
+        document leve - fieldnames
+        element level object 
+
+        methods -accessing
+        properties -manipulation
+
+        how to access the element
+        by id,by tagname ,by classname, queryselector and queryselectorall
+
+        how to access the contne
+        innerHTML   innerText and textContent
+
+        method.innerHTML='new value'
+
+
+        how to add styling
+        method.style.property='value'
+
+
+        document level object
+        using field names we can get the access for the different
+         elements
+         document.body - it returns the body element
+         document.scripts - it returns all the script elements
+         document.title- it returns the title
+         document.forms- return all ther forms
+         document.links- return all the anchor tags
+         document.images- return all the images
+
+
+         how to create a new element and how to append it to the
+         document
+
+         var newel= document.createELement('div')
+         newel.innerText='content is added'
+         document.body.appendChild(newel)
+
+         
+    
+         <ul>
+        <li>content 1</li>
+        <li>content 2</li>
+        <li>content 3</li>
+         </ul>
+
+         how to add an attribute
+
+         method.setAttribute('name', 'value')
+         method.setAttribute('class', 'parent')
+         
+        */ 
+    //    var mainul=document.createElement('ul')
+    //    mainul.setAttribute('class','parent')
+       
+    //    var li1=document.createElement('li')
+    //    li1.innerText='content 1'
+    //    li1.setAttribute('class','child')
+       
+    //    var li2=document.createElement('li')
+    //    li2.innerText='content 2'
+    //    li2.setAttribute('class','child')
+
+       
+    //    var li3=document.createElement('li')
+    //    li3.innerText='content 3'
+    //    li3.setAttribute('class','child')
+
+       
+    //    mainul.append(li1,li2,li3)
+    //    console.log(mainul);
+    //    document.body.appendChild(mainul)
+
+
+//    function hello(){ 
+//        var newel=document.querySelector('h1')
+//        newel.innerText='hello js' 
+//        console.log(newel)
+//     }
+
+
+var img=document.querySelector('img')
+console.log(img)
+
+function one(){
+        img.setAttribute('src','https://media.geeksforgeeks.org/wp-content/cdn-uploads/20220630132824/HTML-Full-Form.jpg')
+
+    }
+
+
+    function two(){
+        img.setAttribute('src','data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAASwAAACoCAMAAABt9SM9AAAA8FBMVEX///8mTeQpZfHr6+sAAAAmS+P///sAOeEpYe+tra3y8evv7usOQeMmZPEcR+T18+yzvOuKmek0avAPW/BPUVri4+YzWOaCg4fr7PVsbXF5e4IfSeRzhudydIEAPePCzvnEy+t7mPMAVfCWrPWPkJcnVOiWlpkaX/EAN+IAVPCnp6cRFy1ub3iDk+ji5PT09fmnsuvL1fqfq+m5x/hihvJGYuJKd/HO0+tsjvNacePd4PUAI+HT09TExMWoqbF4eocJDBo+QEpNZ+Jne+Z8jOiMpfVhd+Zdg/I9b/A5WeFVbeKKmOudqOza3uyqtOppfOJzVXzeAAAIw0lEQVR4nO2dfXfaNhTGTVIHCsZAaRirmSGkKWQbgUDz2q3b8p6UJN//28wu+EW6soUtjI5v9PvTJ76H+xxZ1uMr3WiaQqFQKBQKSYx/f0/yl3ORcQ383d+yf7kEdt9RfNG0Cn3tk6a16Wu/yv7lElhJrF+UWD9RYiVAiZUAJVYC4sT657cl3wOxwtfeHEux/v3yecnfgVjj7QW740As79r2tuxfLoGlWH+Er6mlQwQriaXmrAVKrAQosRKgxEqAEisBrKWDtruk/d0Xy7+2+/3NixXgLErHf35a8tEXC1xTYr1TdicOJVYClFgJUGIlQImVgPF7RnHiv48kjoBt+tpn2b9coVAoFAqFQpE3djaK7GzFuPxW3CDf2rLzFWNY2CDDnA+tlr45rXRddraCPFmbE8u6kp2tIB1zc2KZr7KzFeTHJsUayc5WkPkmxZrLzlaQurE5sYwX2dkK0rVT5a0nwRerKztbQc5SiaVXS6tT9e6yj2VnK8hRMZVYW0nwhpZ9JDtbQcbZi1XyxCqOZWcrygbE8u4q5tztaJqVxu+kEks3ZecqzFUav5NIrMHyJutEdq7CXKdZlSYSq7W8ybyTnaswN5mLdbB80M0b2bkKM0+zhE8nVkN2rsJMshdreZMxkZ2rMKnMYSKxvJuMuuxcheml8TuJxPIX8D3ZuQpzBMXiW2OrygeKdSk7V2Gg39FbfD7w8dSq+m4n57Udhx0gljGpceHHnTSXYvluZ5h9Mplj0H7HbJS3efDD3g5osYzsc8mcRyDWzTrEOi8txfLcjv6YfS6Zc0GbQ+uutgax7j2xml7Yp+xzyRxQDLNO1iGWP8H7C/hO9rlkToMWS9fXIZY3v2NyO5o2BUv4YmUNYh36Ynnz+zT7XDIH+h27LS5Wu4/Q7bD8jn3GHVrcqJdNWiwEbofld4yeuFjHvliI3A7L7xh1cbFmnliY3A7T70zFxZr6bgdPIcwF1HfMRq3CgRsUp9vRtBO4hK/z6ELIcvOeJxYqt6Npd6BkYRk8moBDciOD73a82o51ISm99ZKivsP4UtokX3YPKN0Ow++kEqtPvuwGQCwMbidVfYclFhFzx1/Ae2KhcDup6jtQrGqTiInU7TiL7eT1HYZYD0RMhtvJ+062BZfrEKt0T8RE6nacRyb5Fi0o1mCPiDkDYqFwO85knPz8DkOsfSLmBLidvJ/b8VjHY9gkNzLsI3U7jPpOGrFmRMg9Wiy9JSm5dZP8sBNDLPJl9xW4HQy1HRd42Ek3OZQGFIfky+7UW8C3cLkdVn2ncNOJZ4/mnOd2fkhKbt2A+o5u1Mrx8EL2tyixjLwfcvKAfqco+KV07IvlRcz9IScPRn3nWUwspLUdF+h3uMUwTkSG2znbSCrZA/0Ot77DidiFbifvh5w8xsDvGC9iYjHcDorajgsUa87ZosUJCN0Ohm1/Cw5AMWwkJhZ0O3lv6RAADjuZHTGxoNvJe0uHgFewn+2Js0WLE/AULOCvN5LIJhgBv/MoJlYJiJX3lg4B4LCT43eExMLrdjTthbH5T8QbMtxO/g85ecDmDuaoEcs+DRHvCLid3Ld0CGA0d+B8z6K+ZjXJQhhit5OivkN/KS19JeJBt5P7lg4hRMWiCmEv/poU1062BUkL+EAscs6Cbif/LR0Ckjazo8WiCmFwJxset8Oq71h2GLBopcUiC2HnwO3kv6VDADy/c3XWC0G3JANikYUw6Hby3sAuDGhm5/id0HbbMv3hGYhFFsKqiN0Oy++YYb9ToRditFjUtr/+Fi0WHrfDrO8Qn0p3ixyxiJdd4Hb8Q05Yajsu0O+Q9Z1K/MiqDoho0O3YeNwOy++Q9Z1aQY8V65SMBsXC43ZYzezIw0416mABJRbX7aCp7bjwDjvVqIMFlFi020F6bseDcdgp/BW+fBMvFs/t4KntuOjwsBMhViNWLMrtgENOqNwO47ATWd+pTIdWtFilwwi3g6iBXRjQzI5q7vA8vXMcogXFKg2azfMZOSWd0tYQUW3HBdR3LKq+U6lVeo2TomHqgVjVQbN/P4X722FLh/w3sAsDmnfrFqjvVMq13frowBVM/ynUwy371ER/ixYLk9thHXZiN3dwBHuevJp2f7A3izoFwHA7eGo7LozmDlH72SqVWrkXd7aEUduZxfx5/uD5HVqwuFiXsFzR21AamwFu/otv7hAXi1HbwXHIySNpc4e4WIyWDqjcTuLmDnGxptDtIKrtuCRsZhcXCrodLIecPB6h36mVo8dWXCicDezCgGZ2BbNwU9+NEiwqzLi7V/IGFraWDgGM5g66aQyv5r1yrQIFY8Y43j89bA6Cbq5I3U5kcwfLtI3XyTMYYOD+9uy8GRaKEAtHS4eA6OYOzgArtkbdbUIw8ubj2w/9ZmmLBlUDuzDxzR1cwZ7mZ4FewY2X0/tDekjRbgdHS4cAfvNuy7CtjjflL25qz/YGTcaQosRC5naYzbvZA+yx0XOctOZO5w/9iCGF2+2wzu9EDTBnyr+bvHzlCLWFrYFdGOh3YgfYIPLZCwgOOclObu2A+k6sXHypwtv+ZOe2dkB9R1gstG6H1cxOVCxv7yU6t5OwmR1frNKB/8fo3I6m3a5PrFLLMTrBFIjO7SRsZhctVnVwQL8q0LkdTeuuQSzn2dML4K2Kzu0k/GdFDLGoZy8EOreTsJkd2CZ5wNZpIRY2t+OY4m/LfQxJxWI/e/5fmsY3bG7HoV3vGLax2tLUE6vkDqloiV0f2akj1OonZ/OT4SoDTF9pSA1P5pg23jIYd0d60eAtuqKnc0+owqiLq7QaxdHkumivPoPRStn29Qum7clcdnqN1kpPJBhSrUZP9o+XgTvlF1ec8gvud+eiiXc6X4XL6dMqA8x59oYXE3wLqsQ4U34hbsp3n72DUQ/Z5g8Bjl6uw7uVw8+ebby+rel8JcAibFHfV89eBON6x1pO+aYznd+8kaVUei6nF0PbHt5N1LO3EjtdHP82QKFQKBQKfPwPD+wheqXcCxsAAAAASUVORK5CYII=')
+
+    }
+
+    function three(){
+        img.setAttribute('src','https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRIK8uoM7XCJ-Od4EQvRQhhwLkXvNy9ZTKQnA&s')
+
+    }
+    
+
+    var count=0
+    function btncolor(){
+        var arr=['red', 'green','blue']
+        document.body.style.background=arr[count]
+        count++
+        if(count==3){
+            count=0
+        }
+    }
+    
+
+
+       
+
+
+       
+        
+    </script>
+</body>
+</html>
