@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /*
+        array
+        it is special type of object that is used to store
+        collection of items
+        it is used to group the data in a single variable
+        in array we can do operations like updating, deleting
+        and adding 
+        it can be accessed by numbered indexing
+
+        features of an array
+        1) ordered collection
+        2) mutable
+        3) homogeneous and heterogenous
+        4) dynamic sizing
+
+
+        */ 
+
+        /*
+        
+        how to create an array
+        var arr=['html','css','js']
+
+        how to access an array
+        console.log(arr)
+        
+        how to access each element
+        by indexing we can access and index starts from zero
+        console.log(arr[0])
+
+        ordered collection
+        console.log(arr[0])
+        console.log(arr[1])
+        console.log(arr[2])
+
+        homogeneous - [1,2,3]
+                       ['html','css','js']
+
+        heterogeneous- [1, "hello world", true, [1,2,3], {name:'teja'}]
+
+        arrays are mutable-
+        var arr=['html','css','js']
+        
+        //how to modify
+        arr[0]='html5'
+        arr[0]='hyper text markup language'
+        console.log(arr[0])
+
+        //dynamic sizing
+        var arr=['html','css','js']
+        arr[3]='bootstrap'
+        arr[5]='react'
+        console.log(arr)
+
+        // multi dimensional array
+        var arr=[
+        ['html','css','js'],
+        ['mongodb', 'nodejs','express js']
+        ]
+        console.log(arr[1][2])
+
+        how to find the total elements 
+         var arr=[
+        ['html','css','js'],
+        ['mongodb', 'nodejs','express js']
+        ]
+        console.log(arr.length)
+        console.log(arr[0].length)
+        .length- it is used to return the total no of items in an array
+
+
+        // how to traverse an array
+          var names=['ram','raj','rahul','rani']
+
+        for (i=0;i<names.length;i++){
+            console.log('student name is ' + names[i])...it will get the values
+            console.log(i)....it will get the index
+        }
+
+        using for in loop
+        var names=['ram','raj','rahul','rani']
+
+        for (var i in names){
+            //index of an array
+            console.log(i)
+            //items of an array
+            console.log(names[i])
+        }
+
+        using for of loop
+          var names=['ram','raj','rahul','rani']
+
+        for (var i of names){
+            //item of an array
+            console.log(i)
+        }
+
+// sum of an array
+        var marks=[23,34,56,65,90,200]
+        var sum=0
+
+        for (var i of marks){
+            sum+=i
+        }
+        console.log(sum)
+
+    //how to find average in an array
+     average=sum/marks.length
+     console.log(average)
+
+     //how to find product of an array
+     var marks=[23,34,56,65,90,200]
+     var product=1
+     for (var i of marks){
+        // console.log(product)
+        product*=i
+    }
+    
+    console.log(product)
+    */ 
+
+    var marks=[
+        [10,20,30],
+        [40,30,40],
+        [23,43,43]
+    ]
+
+    // for (i in marks){
+    //     let sum=0
+    //     for(j in marks[i]){
+    //         sum+=marks[i][j];
+    //     }
+    //     console.log(sum)
+    // }
+
+    // for (i of marks){
+    //     sum=0
+    //     for (j of i){
+    //         sum+=j
+    //     }
+    //     console.log(sum)
+    // }
+    
+    // for (var i=0;i<marks.length;i++){
+    //     let sum=0
+    //     for (var j=0;j<marks[i].length;j++){
+    //         sum+=marks[i][j]
+    //     }
+    //     console.log(sum)
+    // }
+
+    //    var arr=[
+    //     ['html','css','js'],
+    //     ['mongodb', 'nodejs','express js']
+    //     ]
+    //     console.log(arr.length)
+    //     console.log(arr[0].length)
+
+    </script>
+
+    
+</body>
+</html>
