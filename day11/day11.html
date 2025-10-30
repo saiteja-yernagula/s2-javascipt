@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /*
+        arrays
+        what is an array
+        how to create an array
+        access an array
+        how to modify an array
+        how to traverse an array
+
+        1) length - returns the no of items in a array
+          var arr=[1,2,3]
+          console.log(arr.length)
+        
+        2) at
+        it will take integer and returns the item at that integer
+        it will take both negative and positive integers
+        
+        console.log(arr.at(0))//returns the item at 0th index
+        console.log(arr.at(-1))//returns the item at last index
+
+        3) concat
+        it is used to merge two or more array 
+        it returns merged array
+        ar arr=['html','css','js']
+        var arr2=['mysql','python','django']
+         
+        console.log(arr.concat(arr2,['mongodb']))
+
+        4) splice 
+        it is used to change the content of an array
+        by adding, by deleting ,by updating
+        it always works on the existing array
+
+        arr.splice(startindex, delete count, newitem1,newitem2,newitems)
+
+        how to delete an item
+        var fullstack=['html','css','js','mysql','python','django']
+         fullstack.splice(3,3)
+         console.log(fullstack)
+         
+         how to add an element at specific index
+         var fullstack=['html','css','js','mysql','python','django']
+         fullstack.splice(3,0,'react')
+         console.log(fullstack)
+
+         how to update
+         var fullstack=['html','css','js','mysql','python','django']
+         fullstack.splice(4,3,'mongodb','node js','express js')
+         console.log(fullstack)
+
+        5) slice- it is used to extract a portion of an array
+        it always create new array
+        arr.slice(startind,endindex)
+        arr=[1,2,3,4,5,6]
+        console.lo(arr.slice(0,3))
+        console.log(arr.slice(3))
+        console.log(arr.slice(-2))//return last two element 5,6
+
+        var frontend=fullstack.slice(0,4)
+         var backend=fullstack.slice(-3)
+         console.log(frontend)
+         console.log(backend)
+
+
+         6) push - it is used to add the item at the ending of an array
+         and it return no of items
+        var products=[]
+        products.push("laptop")
+        products.push("mobile")
+        console.log( products.push("mobile"))
+        console.log(products)
+
+        7)pop - it is used to remove the last element of an array
+        and it returns the deleted element
+
+        products.pop()//removes the last element
+        console.log(products.pop())//it will remove mobile and return mobile
+        console.log(products)
+
+    8)unshift- it is used to add the element at the beginning of an array
+    and return the no of items in a list
+
+       products.unshift('bluetooth')
+        console.log(products.unshift('desktop'))//it will add desktop and 4
+        console.log(products)
+    
+        9) shift- it is used to remove the element at the beginning 
+        and returns the removed element
+        products.shift()
+        console.log(products.shift())//remove and returns the deleted one
+
+
+        
+
+
+
+
+
+
+
+        
+        */ 
+
+        // var products=[]
+
+    //     products.push("laptop")
+    //     products.push("mobile")
+    //    products.push("earpods")
+    //    products.unshift('bluetooth')
+    //     console.log(products.unshift('desktop'))
+
+    //     products.shift()
+    //     console.log(products.shift())//remove and returns the deleted one
+
+        // console.log(products)
+         
+let arr = ["apple", "banana", "mango", "banana", 3, 4, 5, 6, true, {name: "object"}];
+var str=[]
+var num=[]
+var bool=[]
+var obj=[]
+ 
+ for (i of arr){
+    console.log(typeof i)
+    if (typeof i =="string"){
+        str.push(i)
+    }
+    if (typeof i =="number"){
+        num.push(i)
+    }
+    if (typeof i =="boolean"){
+        bool.push(i)
+    }
+    if (typeof i =="object"){
+        obj.push(i)
+    }
+ }
+ console.log(str);
+ console.log(num);
+ console.log(bool);
+ console.log(obj);
+ 
+        
+         
+
+    </script>
+    
+</body>
+</html>
