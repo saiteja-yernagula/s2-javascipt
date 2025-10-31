@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /*
+        array methods
+        length
+        at
+        splice
+        slice
+        concat
+        push
+        pop
+        unshift
+        shift
+        
+
+        10) sort
+        it is used to sort the existing array
+        based on lexicographical ordering
+
+        let arr=[10,9,7,3]
+        arr.sort()
+
+        11) reverse- it is used to reverse the elements
+        of an array
+        let arr=[1,9,7,3]
+        arr.reverse()
+
+        12) join- it is used to join the elements of an
+        array with a specified seperator and returns string
+        let arr=['html','css','js']
+        console.log(arr.join('-'))
+
+        13) search methods
+        1) indexOf()- it is used to return the index of
+        a specified element- if there no specified element
+        it returns -1
+
+         let arr=['html','css','js',]
+         console.log(arr.indexOf('html'))//returns 0
+        console.log(arr.indexOf('react'))//returns -1
+       
+        2) lastIndexOf()- it is used to return the 
+        first precedence index of a elemnent from the last
+        if nothing found- -1
+         let arr=['html','css','js','html']
+         console.log(arr.lastIndexOf('html'))//returns 3
+        console.log(arr.lastIndexOf('react'))//returns -1
+
+        3) includes()- it is used check the existence of an
+        elements -if found it returns true otherwise false
+       let offer=['save30','freedel']
+       console.log(offer.includes('save30'))//true
+       console.log(offer.includes('save50'))//false
+        
+    14) flat- it is used to creat an array with a sub
+    elements of array adding recursively to it upto 
+    the specified depth
+     let arr=[[1,2,3],[4,5,6,[7,8,[9,10]]]]
+      console.log(arr.flat(3))//flat array
+      console.log(arr)
+
+
+        
+
+        */ 
+       let arr=[[1,2,3],[4,5,6,[7,8,[9,10]]]]
+       console.log(arr.flat(3))
+       console.log(arr)
+
+
+
+
+
+
+
+var students=[]
+
+let flag=true
+
+while(flag){
+    var inp=prompt(` 1. Add Student
+  2. View All Students
+  3. Update Student
+  4. Delete Student
+  5. Search Student
+  6. Sort Students
+  7. Reverse List
+  8. Exit
+  Enter your choice (1-8): `)
+ 
+    
+    switch(inp){
+        case '1':
+            let addstd=prompt('enter name to add ')
+            students.push(addstd)
+            console.log(addstd,' added succesfully')
+            break;
+        case '2':
+            console.log('studentslist -',students)
+            break;
+        case '3':
+            var upddata=prompt('enter a name to change ')
+            var ind=students.indexOf(upddata)
+            if (ind==-1){
+                console.log('student not found')
+            }else{
+                let updname=prompt('enter a new name')
+                students.splice(ind,1,updname)
+                console.log('updated')
+            }
+            break;
+        case '4':
+            var deldata=prompt('enter a name to delte')
+            var delind=students.indexOf(deldata)
+            students.splice(delind,1)
+            console.log('deleted succesfullly')
+            break;
+        case '5':
+            var searchdata=prompt('enter a name to search ')
+            if (students.includes(searchdata)){
+                console.log(searchdata,'found')
+            }else{
+                console.log('student not found')
+            }
+            break;
+            
+        case '6':
+            students.sort()
+            console.log('sorted')
+            break;
+        case '7':
+            students.reverse()
+            console.log('reversed')
+            break;
+        case '8':
+            console.log('operation exited')
+            flag=false
+            break;
+    }
+}
+    </script>
+</body>
+</html>
