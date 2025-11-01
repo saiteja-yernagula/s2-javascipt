@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /*
+        sort
+        reverse
+        join
+        search- indexof lastindexof includes
+        flat
+
+
+        how to find a whether a min is first or max is first
+        var arr=[7,8,2,9,1]
+
+        var arr=[7,1,8,2,9,1]
+var min=arr[0]
+var max=arr[0]
+var minind=0
+var maxind=0
+
+for (i in arr){
+    if( arr[i]<min){
+        min=arr[i]
+        minind=i
+    }
+    if(arr[i]>max){
+        max=arr[i]
+        maxind=i
+    }
+}
+
+if( minind<maxind){
+    console.log('min is first')
+}
+else{
+    console.log('max is first')
+}
+
+
+
+
+how to find a whether a  num is prime or not in an array
+var arr=[7,1,8,2,9,1]
+
+for (j of arr){
+    console.log(j,isprime(j))
+}
+
+function isprime(n){
+      if(n<=1){
+            return false
+        }
+    for (var i=2;i<n;i++){
+        if(n%i==0){
+            return false
+        }
+    }
+    return true
+}
+
+
+higher order functions
+higher order functions are the functions that 
+takes function as an argument and returns with
+ modified result
+
+ built in hof
+ forEach
+ map
+ filter
+ reduce
+ some
+ every
+
+ forEach 
+ it is used to iterate an array by applying a provided
+ function for each element
+ and it doesn't return anything
+
+ arr=['html','css','js']
+ 
+ arr.forEach((val,ind,arr)=>{
+ console.log(val)//it returns value individually
+ console.log(ind)//returns index of an ele
+ console.log(arr)//returns the whole array
+ })
+
+ map method
+map is used for transforming an array by applying
+provided function for each element and return 
+the transformed array
+
+a=arr.map((v,i,a)=>{
+console.log(v)//it is used to get the value individually
+return v+'hello'//returns the transformed array
+})
+
+
+
+
+
+
+
+
+
+
+
+
+
+        */
+
+  let arr=[1,2,3,4,5]
+  let double=arr.map(
+    (val)=>{
+        if(val%2==0){
+
+            console.log(val)
+        }
+     
+    }
+  )
+  console.log(double);
+  
+
+ 
+ 
+ 
+    </script>
+    
+</body>
+</html>
