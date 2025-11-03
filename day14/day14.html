@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /*
+        builtin hof
+        forEach()
+        map()- it is used to create a transformed array
+              by applying provided function
+
+
+       let arr=[1,2,3]
+
+       let newarr=arr.map((val,ind,arr)=>{
+    //    return val + val
+       return val%2==0 
+       })
+       console.log(newarr)
+
+       filter - it is used to create an array that passes a certain 
+               condition by applying a provided function for each 
+               element
+
+       let filterarr=arr.filter((val,ind,ar)=>{
+       return val%2==0
+       })
+       console.log(filterarr)//[2]
+        
+        */ 
+
+    //     let arr=[1,2,3,4,5,6]
+
+    //     let filterarr=arr.filter((val,ind,ar)=>{
+    //    return val%2==0
+    //    })
+    //    console.log(filterarr)//[2]
+
+    //    let data=[
+    //     {
+    //         name:'john',
+    //         age:23,
+    //         marks:90
+    //     },
+    //      {
+    //         name:'jessy',
+    //         age:20,
+    //         marks:95
+    //     }
+    //     ,
+    //      {
+    //         name:'jenny',
+    //         age:18,
+    //         marks:35
+    //     }
+
+    //    ]
+
+    //    var filtereddata=data.filter(a=>a.marks>50)
+    //    console.log(filtereddata)
+
+    //    var filtereddata=data.filter(a=>a.age>50)
+    //    console.log(filtereddata)
+    
+
+    /*
+    reduce - it used to make an array of elements to a single value
+           
+    
+    
+    */ 
+
+    // var arr=[1,2,3]
+    // // accumulator
+    // var sum=arr.reduce((acc,val,ind,ar)=>{
+    //     return acc+val
+
+    // },0)
+    // console.log(sum)
+    
+
+    /*
+
+    sort method 
+    it is used to sort the elements of an array in asscending and 
+    descending based on comparsion
+
+    //asscending order
+    arr=[10,6,1,90,2,0]
+    var sortedarr=arr.sort((a,b)=>{
+    return a-b
+    })
+       //descending  order
+    arr=[10,6,1,90,2,0]
+    var sortedarr=arr.sort((a,b)=>{
+    return b-a
+    })
+    
+   If a - b is negative, a comes before b,
+    if it's positive, b comes before a, and 
+    if it's zero, the order remains unchanged.
+
+    6-10
+    -4
+    a,b
+
+    a   b
+    10-6
+    4
+    6 10
+    b a
+    
+    */ 
+
+    var data=[
+        {
+            name:'john',
+            age:23,
+            marks:90
+        },
+         {
+            name:'jessy',
+            age:20,
+            marks:95
+        }
+        ,
+         {
+            name:'jenny',
+            age:18,
+            marks:35
+        }
+
+       ]
+
+    //    var data=[1,20,3]
+
+       let newdata=data.sort((a,b)=>a.marks-b.marks)
+       console.log(newdata);
+       
+    </script>
+    
+</body>
+</html>

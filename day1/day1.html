@@ -477,11 +477,60 @@ const people = [
 // [{ name: "Jane", age: 22 }, { name: "Jack", age: 19 }]
 
 
+const products = [
+  { name: "Laptop", price: 70000, rating: 4.5, inStock: true },
+  { name: "Phone", price: 35000, rating: 4.2, inStock: false },
+  { name: "Tablet", price: 25000, rating: 3.8, inStock: true },
+  { name: "Headphones", price: 4000, rating: 4.8, inStock: true },
+  { name: "Smartwatch", price: 15000, rating: 4.0, inStock: false },
+];
 
+const students = [
+  { name: "Anjali", marks: 85, subject: "Math" },
+  { name: "Ravi", marks: 42, subject: "Science" },
+  { name: "Kiran", marks: 67, subject: "English" },
+  { name: "Sneha", marks: 91, subject: "Math" },
+  { name: "Rahul", marks: 55, subject: "Science" }
+];
+
+const cart = [
+  { item: "Shoes", qty: 2, price: 2500 },
+  { item: "T-shirt", qty: 3, price: 800 },
+  { item: "Watch", qty: 1, price: 4500 },
+  { item: "Socks", qty: 5, price: 100 }
+];
   
   
+  🛍️ Shopping Cart
+const cart = [
+  { item: "Shoes", price: 1500, quantity: 2 },
+  { item: "Bag", price: 800, quantity: 1 },
+  { item: "Watch", price: 3000, quantity: 1 }
+];
+
+
+Tasks:
+
+map: Add a new key total = price * quantity.
+filter: Show items where price > 1000.
+reduce: Find total bill amount.
+some: Check if any item costs more than ₹2000.
+every: Check if all quantities > 0.
+sort: Sort items by price (low → high).
   
-  
+
+Combine multiple array methods.
+
+Map + Filter:
+From [10, 25, 30, 45, 50],
+First double the numbers using map,
+Then filter only those above 60.
+
+Filter + Reduce:
+From an array of numbers, filter only even numbers and find their sum.
+
+Sort + Map:
+Sort names alphabetically and then convert to uppercase.
   
   
   
