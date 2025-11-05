@@ -63,8 +63,7 @@
 
 async function getdata(){
     let inp=prompt('enter a city name')
-    let r=await fetch(`https://api.openweathermap.
-    org/data/2.5/weather?q=${inp}&units=metric&appid=466ddaa21a8de191e9f608bd11a56acb`)
+    let r=await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${inp}&units=metric&appid=466ddaa21a8de191e9f608bd11a56acb`)
     let d=await r.json()
     console.log(d.main.temp)
 }
