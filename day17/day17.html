@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        
+        /*
+        higher order function
+        some 
+        every
+
+        find- it is used to return the value of first precedence
+        which satisfies the condition
+
+        var arr=[1,2,3,4,5,6]
+
+        var newarr=arr.find(val=>val>4)
+        console.log(newarr)
+        
+        //  var arr=['html','laptop']
+        
+        // var newarr=arr.find(val=>val=='laptop')
+        // console.log(newarr)
+        
+
+        destructuring
+        it is used extract a values from an array and object and assigned
+        to a variable
+
+        let arr=[1,2,3]
+        let [a,,c,d=4]=arr
+        console.log(a)//1
+
+        
+        */ 
+
+        // let arr=['html ','css',['python','node js',[['django','flask'],'express js']]]
+        // let [a,b,[p,n,[[d,f]]]]=arr
+        // console.log(f)
+    
+        // console.log(arr[2][2][0][1])
+
+        // let arr2=[1,2,3,4,5,6]
+        // let [a,b,...c]=arr2
+        // console.log(c)//[3,4,5,6]
+
+        // shallow copy - when array is assigned to another variable
+        //then references will be assigned not the pure copied value
+        // let arr=['html','css','js']
+        // let b=arr
+        // b[0]='python'
+        // console.log(arr[0])
+
+        // deep copy- values is assigned not the references
+        // spread operator - it is used to spread the values of an
+        // array and object
+        // let arr2=[1,2,3]
+        // let b2=[...arr2]
+        // b2[0]='hello'
+        // console.log(arr2)
+        // console.log(b2)
+
+
+        const products = [
+  { name: "Laptop", price: 70000, rating: 4.5, inStock: false },
+  { name: "Phone", price: 35000, rating: 4.2, inStock: false },
+  { name: "Tablet", price: 25000, rating: 3.8, inStock: true },
+  { name: "Headphones", price: 4000, rating: 4.8, inStock: false },
+  { name: "Smartwatch", price: 15000, rating: 4.0, inStock: false },
+];
+
+// let newproducts=products.map(val=>{
+//     return {
+//         ...val,
+//         gst: val.price*1.18
+//     }
+// })
+// console.log(newproducts)
+
+// how to merge
+let arr1=[1,2,3]
+let arr2=[3,4,5]
+// console.log([...arr1,...arr2])
+
+// arr1.splice(3,0,...arr2)
+// console.log(arr1)
+
+/*
+Rest Parameters:
+ * Rest operator is introduced in ES6  used in function parameters 
+ * Rit is denoted by ...
+ * it implicitly an array
+ * it will accepts from 0 to n number of arguments
+ * it should be the last parameter of function and can be only one
+*/ 
+// function fun(a,...c){
+//     console.log(c)
+// }
+// fun(...arr1,...arr2)
+
+    </script>
+</body>
+</html>
