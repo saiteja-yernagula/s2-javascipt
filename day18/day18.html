@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+
+        /*
+
+        find
+        destrcuturing
+        spread operator
+        rest operator
+
+        objects
+        it is used to store the data in key value pairs
+        it is accesed by named indexing
+        object has properties and methods
+
+        how to create an object
+        1) literal notaion
+        let obj={
+        key:"value"
+        }
+
+        let obj={
+        name:'john',
+        age:25
+        }
+        
+         2) by constructor
+         let obj=new Object({})
+
+         how to access
+         1) dot notation
+         object.propertyname
+
+         console.log(obj.name)
+         console.log(obj.age)
+
+         2) square notation
+         object['property']
+         console.log(obj['name'])
+         console.log(obj['age'])
+
+         how to modify
+         obj.name='jessy'
+         obj['age']=23
+
+         how to add a new property
+         obj.city='hyd'
+         obj['role']='kotlin developer'
+
+         how to delete a property
+         delete obj.age
+
+         object method
+         
+        let obj={
+        name:'john',
+        age:25,
+        getdata: function(){
+            console.log(this.name)
+            console.log(this.age)
+             }
+        }
+
+
+
+        this 
+        it is used to represent the current calling object
+
+        in document level it will represent window
+        because window is a global object
+        console.log(this)//window
+
+        but in method of an object
+        console.log(this)//object
+
+        call apply and bind- it is used to manipulate the 
+        this keyword
+
+        
+       object iterating
+        let obj={
+            name:'john',
+            age:25
+           }
+
+        for (var i in obj){
+        console.log(i)//keys
+        console.log(obj[i])//values
+        }
+
+        object methods
+
+        1) Object.keys(obj)
+        it is used to return the keys in an array format
+
+        2) Object.values(obj)
+        it is used to return the values of an object
+         in an array format
+
+         3) Object.entries(obj)
+         it is used to return the each value in an 
+         array
+
+         4) Object.assign()
+
+                  let obj={
+            name:'john',
+            age:25
+        }
+        
+        let obj2={
+            city:'hyd'
+           }
+           // Object.assign(target,source1,source2,...)
+        console.log(Object.assign({},obj,obj2))//create new obj
+        console.log(obj)
+
+        //it will be assigned to target (obj)
+        console.log(Object.assign(obj,obj2))
+        console.log(obj)
+    
+
+        
+
+        
+
+        
+        */
+
+
+        //    let obj={
+        //     name:'john',
+        //     age:25
+        //    }
+
+        //     obj.name='jessy'
+        //     obj['age']=23
+
+        //     obj.city='hyd'
+        //      obj['role']='kotlin developer'
+
+        //      delete obj.age
+        //      console.log(obj)
+
+        // let obj = {
+        //     name: 'john',
+        //     age: 25,
+        //     getdata: function () {
+        //         console.log(this)
+        //         console.log(this.name)
+        //         console.log(this.age)
+        //     }
+        // }
+
+        // obj.getdata()
+
+        // console.log(this)
+
+        // c=0
+
+
+        // for (var i in obj){
+        // console.log(i)//keys
+        // console.log(obj[i])//values
+        // c++
+        // }
+        // console.log(c)
+
+        //  let obj={
+        //     name:'john',
+        //     age:25,
+        //     job:{
+        //         role:'developer',
+        //         tech:'python'
+        //     }
+        // }
+        
+        // let obj2={
+        //     city:'hyd'
+        //    }
+
+        //    how to merge using spread operator
+        //    console.log({...obj,...obj2})
+
+        // how to destructure
+        //  let obj={
+        //     name:'john',
+        //     age:25,
+        //     job:{
+        //         role:'developer',
+        //         tech:'python'
+        //     }
+        // }
+
+        // let {name:nam,age,job:{role,tech}}=obj
+        // console.log(tech)
+
+        // Object.seal(obj)
+                 let obj={
+            name:'john',
+            age:25
+
+           
+        }
+        // //we cannot add and delete but we can modify
+        // Object.seal(obj)
+        // obj.city='hyd'//not possible
+        // delete obj.age//not possible
+        // obj.name='jessy'//possible
+        // console.log(obj)
+
+        // in freeze we cannot perform anything 
+        // only we can access
+        Object.freeze(obj)
+         obj.city='hyd'//not possible
+        delete obj.age//not possible
+        obj.name='jessy'//not possible
+        console.log(obj)
+
+        //it will return true if the key exist in an object
+        console.log(obj.hasOwnProperty('name'))
+
+
+
+
+    </script>
+
+</body>
+
+</html>
