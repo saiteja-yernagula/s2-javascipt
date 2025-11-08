@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /*
+
+        strings
+        it is a collection of characters that
+        are enclosed in single or double quotes
+
+        strings are immutable
+        var str='hello world'
+        str[0]='w'
+        console.log(str)//hello world
+
+        var a='hello world'
+        var b="hello world"
+
+        backticks- to make string interpolation
+        a=10
+        template literals ${a}
+        var c=`multi line string ${a}`
+        
+
+        how to iterate a string
+        for of - values
+        for in - index and values
+        for - index and values
+        
+        var str='hello world'
+        // for (i of str){
+            //     console.log(i)
+            // }
+            
+            for (i in str){
+                // console.log(i)//index
+                console.log(str[i])//values
+            }
+            
+        for (var i=0;i<str.length;i++){
+            // console.log(i)//index
+            console.log(str[i])//values
+        }
+
+        spread operator usage in string
+        it is used to spread the each character of a string
+        to an collection of array
+
+        var str='hello world'
+        var arr=[...str]
+        console.log(arr)
+
+        methods in strings
+        1) length
+        it is used to return the total no of characters 
+        in a string
+
+        var str='javascript'
+        console.log(str.length)
+
+       2) at method
+       it is used to return the character at specified 
+       index
+       and it also takes negative values
+        var str='javascript'
+        console.log(str.at(-1))//t
+        console.log(str.at(0))//j
+       
+ 3) charAt
+ it is used to return the character at specified index
+ but it does't take negative values
+      var str='javascript'
+ console.log(str.charAt(0))//j
+ console.log(str.charAt(-1))//t   
+
+4) charCodeAt
+it is used to return the ascii value of an character
+        var str='jAvascript'
+    console.log(str.charCodeAt(1))
+
+5) String.fromCharCode()
+it is used to rerturn the characte at that ascii value
+    console.log(String.fromCharCode(65))//A
+    inp='sai'
+    out='rzh'
+
+6) slice
+it is used to slice out the portion of a string and 
+it creates new string
+    var str='javascript'
+                     startind,endindex
+    console.log(str.slice(0,4))//java
+    console.log(str.slice(4))//script
+    console.log(str.slice(-4,-1))//rip
+
+7) substring
+it is same like slice but it takes negative values as 
+like 0
+
+    var str='javascript'
+    console.log(str.substring(0,4))//java
+    console.log(str.substring(4))//script
+    console.log(str.substring(-4))//javascript
+
+8) substr
+it is used to slice out a string
+but it takes second parameter as a length
+     var str='javascript'
+                        startind,length
+    console.log(str.substr(0,4))//java
+    console.log(str.substr(4,6))//script
+    console.log(str.substr(0))//javascript
+    console.log(str.substr(-5,4))//crip
+
+        */ 
+
+     var str='javascript'
+    console.log(str.substr(0,4))//java
+    console.log(str.substr(4,6))//script
+    console.log(str.substr(0))//javascript
+    console.log(str.substr(-5,4))//crip
+    
+
+
+
+
+
+
+
+        </script>
+    
+</body>
+</html>
