@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        /*
+        strings 
+        and methods
+
+        length
+        at
+        charat
+        charcodeat
+        string.fromcharcode
+        slice
+        substring
+        substr
+
+        1) concat 
+        it is used to merge two or more strings
+
+        let str1='hello'
+        let srt2='world'
+        console.log(str1.concat(str2))
+
+        + operator
+        console.log(str1+str2)
+
+        2) str.toUpperCase() and str.toLowerCase()
+        toLowerCase()
+        it converts the each character into lowercase
+        var str='HeLlo js'
+        console.log(str.toLowerCase())
+
+        toUpperCase()
+        it convert the each character into uppercase
+         var str='HeLlo js'
+        console.log(str.toUpperCase())
+
+        3) trim 
+        it is used to remove the whitespace at the 
+        beginning and ending of a string
+        var str='                 HeLlo js                '
+        console.log(str.trim())
+        console.log(str)
+
+        4) split 
+        it is used to conver the string to array
+        by based on a separator
+        var str='js is amazing'  
+        console.log(str.split(' '))   
+
+        5) repeat
+        it is used to concate a same string specified
+        n no of times
+        var str='hello world '  
+        console.log(str.repeat(3))   
+        
+        6) replace- it is a method that is used  to replace
+        the content with the new value to the first precedence
+        var str='hello World World '  
+        console.log(str.replace(/world/gi,'js'))  
+
+        flagset
+        g -it will make it as a global
+        i- it will turn into case insensitive
+
+        search methods
+        1) indexOf() and lastIndexOf()
+        it is used to return the index of a 
+        specified character
+        and returns -1 if not found
+        var str='hello World hi World '  
+        console.log(str.indexOf('h',10))   
+        console.log(str.lastIndexOf('W',14))   
+        
+        2) search
+        it is used to return the index of a substring
+        and it doent have any second parameter
+        var str='hello World hi World '  
+        console.log(str.search('World'))   
+
+        3) includes
+        it is used to check exitence of a substring
+        and return true 
+        if not returns false
+        var str='hello World hi World '  
+        console.log(str.includes('hello')) //true
+
+        4) match
+        it is used to search and returns the result of
+        elements in a collection
+        var str='tha rain in the spAin not in my brain '  
+        console.log(str.match(/ain/ig))   
+           
+    how to reverse a string
+
+    var str='javascript'
+    console.log(str.split("").reverse().join(''))
+
+    var str='javascript'
+    var rev=""
+
+    for ( var i=str.length-1;i>=0;i--){
+       rev+=str[i]
+    }
+    console.log(rev)
+
+var str='javascript'
+var rev=""
+
+for (i of str){
+    rev=i+rev
+}
+console.log(rev)
+
+if(str==rev){
+    console.log(str,'is palindrome')
+}
+else{
+    console.log(str,'is not a palindrome')
+}
+
+var str='js is amazing'
+console.log(str.split(' ').length)
+
+        */
+        //  let str1='hello'
+        // let str2='world'
+        // console.log(str1.concat(str2))
+        // // console.log(str1+str2)
+        // var str='tha rain in the spAin not in my brain '  
+        // console.log(str.match(/ain/ig))   
+  
+//how to find words count
+  var str='js is amazing'
+console.log(str.split(' ').length) 
+
+//how to remove duplicates
+var str2='jjavaaaaa'
+var newstr="j"
+for (var i of str2){
+    if (!newstr.includes(i)){
+        newstr+=i
+    }
+}
+console.log(newstr)
+//vowels or not
+var str3='javascript'
+var vowels='aeiou'
+for (var j of str3){
+    if (vowels.includes(j)){
+        console.log('it contains')
+        break
+    }
+}
+
+    </script>
+</body>
+</html>
