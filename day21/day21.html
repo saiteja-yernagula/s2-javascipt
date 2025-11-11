@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /*
+
+        number methods
+        1) toFixed()
+        it is used to add fixed decimal numbers to an number
+
+        var num=10
+        console.log(num.toFixed(2))//10.00
+        var num=10.98
+        console.log(num.toFixed(1))//11.0
+        var num=10.93
+        console.log(num.toFixed(1))//10.9
+        
+        2) parseint
+        it used to return the integer value within the string
+        var str='123hello'
+        console.log(parseInt(str))//123
+
+         var str='       123          hello'
+        console.log(parseInt(str))//123
+
+          var str='       123.13          hello'
+        console.log(parseInt(str))//123
+
+                var str='hello123.13hello'
+        console.log(parseInt(str))//NaN
+        3) parseFloat
+        it is used to return the floating number value
+        within a string
+        var str='123.13hello'
+        console.log(parseFloat(str))//123.13
+
+        4) isNaN()
+        it is used to check whether a value is number or 
+        not a number
+        it returns true if it is 'not a number'
+
+        isNaN('hello ')//true
+        isNaN(undefined)//true
+        isNaN('19 ')//false
+        isNaN(19)//false
+        isNaN(true)//false
+
+        5) Number()
+        it is used to convert one datatype to another datatype
+        var str=Number('10')
+        console.log(typeof str)//number
+
+        
+        math methods
+        1) Math.ceil()
+        it is used to round up the number to the
+        largest integer
+        console.log(Math.ceil(9.8))//10
+        console.log(Math.ceil(9.1))//10
+        console.log(Math.ceil(-9.8))//-9
+
+        2) Math.floor()
+        it is used to round down the number to the
+        smallest integer
+        console.log(Math.floor(9.8))//9
+        console.log(Math.floor(9.1))//9
+        console.log(Math.floor(-9.1))//-10
+        console.log(Math.floor(-9.8))//-10
+
+        3) Math.round()
+        it is used round the number based on a
+        nearest integer
+        console.log(Math.round(9.8))//10
+        console.log(Math.round(9.5))//10
+        console.log(Math.round(9.4))//9
+        console.log(Math.round(-9.4))//-9
+        console.log(Math.round(-9.8))//-10
+
+        4) Math.random()
+        it is used to generate a random number between
+        0-1
+        console.log(Math.random())//0-1
+        console.log(Math.round(Math.random()*10))
+        //    randome otp
+        console.log(Math.round(Math.random()*10000))
+        arr=['frontendquestions','backendquestions','database']
+        //   random item within an array
+        console.log(arr[Math.abs(Math.ceil(Math.random()*arr.length-1))])
+        
+        5) Math.trunc()
+        it is used to remove a decimal points in a number
+        console.log(Math.trunc(10.734899))//10
+
+        6) Math.abs()
+        it is used to convert the number into absolute
+        number(positive number)
+        console.log(Math.abs(-10))//10
+        console.log(Math.abs(-1))//1
+
+        7) Math.min(value1,value2,value2)
+        it will return the min number in a set of values
+        console.log(Math.min(8,2,1,83))//1
+        
+        8) Math.max(value1,value2,value2)
+        it will return the max number in a set of values
+        console.log(Math.max(8,2,1,83))//83
+
+        9) Math.sqrt(9)//3
+           Math.pow(2,3)//8
+           Math.tan()
+           Math.sin()
+
+        */
+        console.log( Math.pow(2,3))//1
+
+    </script>
+    
+</body>
+</html>
