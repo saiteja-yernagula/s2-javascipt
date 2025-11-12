@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="date" >
+    <button onclick="fun()">calculate</button>
+    <div>
+    </div>
+    
+    <script>
+       
+        // digital clock
+        // var div=document.querySelector('div')
+        // setInterval(()=>{
+        // let d=new Date()
+        // div.innerText=d.toLocaleTimeString()
+        // },1000)
+
+        // div.style.textAlign='center'
+        // div.style.fontSize='100px'
+        var inp=document.querySelector('input')
+        var div=document.querySelector('div')
+        div.style.textAlign='center'
+        div.style.fontSize='100px'
+      
+        function fun(){
+        let today=new Date()
+        let birth=new Date(inp.value)
+        let yeardif=today.getFullYear()-birth.getFullYear()
+        let daydif=(today-birth)/(24*60*60*1000)
+        div.innerText=yeardif
+        }
+    </script>
+    
+</body>
+</html>

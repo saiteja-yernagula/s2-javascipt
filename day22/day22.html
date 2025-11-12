@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   <script>
+    /*
+    
+    number and math methods
+    date methods
+
+    date object
+    let d=new Date()
+    */ 
+   let c=new Date()
+   let today=new Date()
+   let year=prompt('enter ur year')
+   c.setFullYear(year)
+   c.setMonth(11)
+   c.setDate(21)
+   c.setHours(10)
+   c.setMinutes(10)
+   c.setSeconds(10)
+   
+   console.log(today.getFullYear()-c.getFullYear())//age in year
+   console.log((today-c)/(24*60*60*1000))//age in days
+
+
+//    console.log(today.toDateString())//Wed Nov 12 2025
+//    console.log(today.toLocaleDateString())//12/11/2025
+
+//    console.log(today.toTimeString())//17:20:19 GMT+0530 (India Standard Time)
+//    console.log(today.toLocaleTimeString())//17:20:19
+
+//    let weeks=['sun','mon','tue','wed','thu','fri','sat']
+//    console.log(weeks[today.getDay()])
+
+//    let months=['jan','feb','marc','apr','may','june','jul','aug','sep','oct','nov','dec']
+//    console.log(months[today.getMonth()])
+
+//    console.log(today.getFullYear())
+//    console.log(today.getMonth()+1)//return index of the month-0-11
+//    console.log(today.getDay()+1)//return week day
+//    console.log(today.getDate())//return monthly date
+
+//    console.log(today.getHours())
+//    console.log(today.getMinutes())
+//    console.log(today.getSeconds())
+
+     
+
+  
+
+   </script> 
+</body>
+</html>
