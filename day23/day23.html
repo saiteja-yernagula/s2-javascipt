@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<style>
+		#container{
+			color:white;
+			background: navy;
+			padding:20px;
+			font-weight: 900;
+			font-size: 40px;
+			width: 20%;
+		}
+	</style>
+</head>
+<body>
+	<div>content</div>
+	<div class="card">content</div>
+	<div>content</div>
+	<div>content</div>
+	<div id="el">content</div>
+	<div>content</div>
+	<div>content</div>
+	<div>content</div>
+	<div>content</div>
+	<h1 class="card">content</h1>
+	<p class="card">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ut a exercitationem reprehenderit nisi in debitis vero ipsa, culpa sequi nemo sed necessitatibus dolor eligendi nesciunt inventore perferendis dignissimos mollitia magnam!</p>
+	<script>
+		/*
+		dom
+		document object model
+		it is a standard object model that allows
+		programs and scripts to control the content,style
+		and structure of a page
+		we have methods(accessing) and properties(manipulating)
+
+		dom have two types of object
+		1) element level objects
+		2) document level objects
+
+		console.log(document)//returns the whole document
+
+	element level objects
+
+	how to access an element
+	1.) document.getElementsByTagName('h1')-
+	 it will get the referces of an elements in a
+	 collection of an array and can be accessed by indexing
+
+	 console.log(document.getElementsByTagName('div'))
+
+	 let a=document.getElementsByTagName('div')
+	 console.log(a[0])//return the first element
+	 console.log(a[1])//return the second element
+
+	2) document.getElementsByClassName('card')
+	it will get the referces of an elements in a
+	collection of an array but based on the classname
+	 let a=document.getElementsByClassName('div')
+	 console.log(a[0])//return the first element
+	 console.log(a[1])//return the second element
+
+
+	 3) document.getElementById('el')
+	 it will get the reference of an element based on
+	 id and return that element
+	   let a=document.getElementById('el')
+	 console.log(a)//return the  element
+
+	 4) document.querySelector('h1' or '.card' or '#el')
+	 it will get the reference of an first precedence
+	 element based on id or class or tagname
+	   let byid=document.querySelector('#el')
+	   console.log(byid)
+
+	   let byclass=document.querySelector('.card')
+	   console.log(byclass)
+
+	   let bytag=document.querySelector('div')
+	   console.log(bytag)
+
+	5) document.querySelectorAll('div' or '.card'or '#el')
+	it is used to get the reference of all elements
+	based on tag or class or id and return collection
+
+	   let byclass=document.querySelectorAll('.card')
+	   console.log(byclass)
+
+	   let bytag=document.querySelectorAll('div')
+	   console.log(bytag)
+
+
+	how to access content
+	1) innerText
+   a= method.innerText
+   a= document.getElementById('el').innerText
+   console.log(a)//content
+
+   a=document.getElementsByTagName('div').innerText
+   console.log(a)//undefined
+
+   a=document.getElementsByTagName('div')[2].innerText
+   console.log(a)//content
+	2) innerHTML
+	3) textContent
+
+	how to modify content
+	1) innertext
+	a=document.getElementsByTagName('div')
+   a[0].innerText='hello world'
+
+   a[0].innerText='<b>hello world</b>'//it is not a good practice\
+
+   2) innerHTML
+	a=document.getElementsByTagName('div')
+   a[0].innerHTML='<u>hello world</u>'
+
+   how to apply styles
+   method.style.propertyname='value'
+   a[0].style.color='red'
+   a[0].style.backgroundColor='blue'
+   a[0].style.fontSize='40px'
+
+
+   how to set an attribute
+   a=document.getElementsByTagName('div')
+   a[3].setAttribute('id','container')
+   a[3].setAttribute('class','demo')
+
+		*/
+   a=document.getElementsByTagName('div')
+
+   a[3].setAttribute('id','container')
+   a[3].setAttribute('class','de`mo')
+   a[3].setAttribute('id','demo2')
+   console.log(a[3])
+
+
+//
+
+
+
+	</script>
+</body>
+</html>
