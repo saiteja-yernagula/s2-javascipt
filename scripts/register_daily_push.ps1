@@ -2,7 +2,9 @@
 Register a Windows scheduled task that runs the daily push script.
 
 Usage (run in PowerShell as your user):
-  powershell.exe -NoProfile -ExecutionPolicy Bypass -File .\scripts\register_daily_push.ps1 -Time "03:00" -TaskName "DailyPushRepo"
+    powershell.exe -NoProfile -ExecutionPolicy Bypass -File .\scripts\register_daily_push.ps1 -Time "03:00" -TaskName "DailyPushRepo"
+
+#>
 
 # Parameters
 param(
