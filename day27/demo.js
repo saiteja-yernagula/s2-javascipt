@@ -87,6 +87,7 @@ window.addEventListener('resize',()=>{
         document.body.innerText='mobile view'
         document.body.style.background='red'
     }
+    
 })
 
 window.addEventListener('scroll',()=>{

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: #f3f4f6;
+        }
+
+        .calculator {
+            background: white;
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        input {
+            width: 100%;
+            height: 50px;
+            font-size: 20px;
+            text-align: right;
+            margin-bottom: 10px;
+            border: none;
+            background: #f0f0f0;
+            border-radius: 8px;
+            padding-right: 10px;
+        }
+
+        .buttons {
+            display: grid;
+            grid-template-columns: repeat(4, 60px);
+            gap: 10px;
+        }
+
+        button {
+            padding: 15px;
+            font-size: 18px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: 0.2s;
+        }
+
+        button:hover {
+            background: #d1d5db;
+        }
+
+        .equal {
+            background-color: #22c55e;
+            color: white;
+        }
+
+        .clear {
+            background-color: #ef4444;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="calculator">
+        <input type="text" class="display">
+        <div class="buttons">
+            <button onClick="del()" class="">del</button>
+            <button onClick="add('1')">1</button>
+            <button onClick="clr()" class="clear">C</button>
+            <button onClick="cal()" class="equal">=</button>
+    
+            <button onClick="add('2')">2</button>
+            <button onClick="add('3')">3</button>
+            <button onClick="add('4')">4</button>
+            <button onClick="add('5')">5</button>
+            <button onClick="add('6')">6</button>
+            <button onClick="add('7')">7</button>
+            <button onClick="add('8')">8</button>
+            <button onClick="add('9')">9</button>
+            <button onClick="add('0')">0</button>
+            <button onClick="add('+')">+</button>
+            <button onClick="add('-')">-</button>
+            <button onClick="add('/')">/</button>
+            <button onClick="add('*')">*</button>
+        </div>
+        </div>
+
+  
+    <script src="demo.js"></script>
+</body>
+</html>
