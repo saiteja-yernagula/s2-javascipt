@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #container{
+            display: grid;
+            grid-template-columns: auto auto auto;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>filtered and sort products</h1>
+    <label for="">filtered by brand</label>
+    <select name="" id="filteredbybrand">
+        <option value="all">all</option>
+        <option value="apple">apple</option>
+        <option value="samsung">samsung</option>
+        <option value="onePlus">oneplus</option>
+    </select><br>
+
+<input type="text" id="filteredbyprice" placeholder="filter by price">
+<br>
+    <select name="" id="sortbyprice">
+        <option value="high">high-low</option>
+        <option value="low">low-high</option>
+    </select>
+
+<div id="container"></div>
+
+    <script src="demo.js"></script>
+</body>
+</html>

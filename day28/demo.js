@@ -39,3 +39,11 @@ function cal(){
 function clr(){
 inp.value=''
 }
+
+document.getElementById("fileInput").addEventListener("change", function(event) {
+    let file = event.target.files[0];
+
+    if (file) {
+        document.getElementById("preview").src = URL.createObjectURL(file);
+    }
+});
