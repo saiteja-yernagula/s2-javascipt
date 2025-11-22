@@ -1,0 +1,16 @@
+<h3 id="logout"></h3>
+
+<script>
+let time = 15;
+
+let id = setInterval(() => {
+    document.getElementById("logout").innerHTML = 
+        `Auto logout in ${time} sec`;
+
+    if (time === 0) {
+        clearInterval(id);
+        alert("Logged out!");
+    }
+    time--;
+}, 1000);
+</script>
