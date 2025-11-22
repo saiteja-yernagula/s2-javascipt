@@ -1,16 +1,23 @@
-<h3 id="logout"></h3>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
 
-<script>
-let time = 15;
 
-let id = setInterval(() => {
-    document.getElementById("logout").innerHTML = 
-        `Auto logout in ${time} sec`;
-
-    if (time === 0) {
-        clearInterval(id);
-        alert("Logged out!");
-    }
-    time--;
-}, 1000);
-</script>
+    <h1>main page</h1>
+    <a href="second.html">link</a>
+    
+    <form action="">
+        <input type="text" placeholder="enter username"> <br>
+        <input type="text" placeholder="enter ur mail"> <br>
+        <button  type="submit">submit</button>
+    </form>
+    
+    <script src="demo.js">  
+    </script>
+</body>
+</html>

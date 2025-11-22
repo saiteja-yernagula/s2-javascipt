@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            display:grid;
+            grid-template-columns: auto auto;
+            gap:10px;
+        }
+        .container>div{
+            box-shadow: 0px 0px 3px 3px black;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+
+    </div>
+
+    <script>
+        let data=JSON.parse(localStorage.getItem('formdata'))
+        console.log(data);
+        let container=document.querySelector('.container')
+        data.forEach(val=>{
+            let card=document.createElement('div')
+            card.innerHTML=`
+            <h1>${val.name}</h1>
+            <h1>${val.email}</h1>
+            `
+            container.append(card)
+        })
+    </script>
+    
+</body>
+</html>
