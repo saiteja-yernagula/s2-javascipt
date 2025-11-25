@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap:10px;
+        }
+        .container>div{
+            padding:10px;
+            font-size: 20px;
+            box-shadow: 0px 0px 3px 2px black;
+        }
+    </style>
+</head>
+<body>
+    <div class="container"></div>
+    <script>
+        let data=JSON.parse(localStorage.getItem('cartdata'))
+        console.log(data)
+
+
+        let container=document.querySelector('.container')
+
+    data.forEach((val)=>{
+        let card=document.createElement('div')
+        card.innerHTML=`
+        <b>${val.title}</b>
+        <div>${val.price}</div>
+        
+
+        `
+   
+ 
+
+        container.append(card)
+    })
+
+    </script>
+    
+</body>
+</html>
