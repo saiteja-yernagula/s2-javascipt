@@ -52,16 +52,16 @@ function load(){
 }
 load()
 
-// let a=+prompt('enter a timer')
-// let divtimer=document.getElementsByClassName('timer')[0]
-// divtimer.innerText=a
-// let timer=setInterval(()=>{
-//     if(a==0){
-//         alert('times up')
-//         clearInterval(timer)
-//     }
-// divtimer.innerText=a--
-// },1000)
+let a=+prompt('enter a timer')
+let divtimer=document.getElementsByClassName('timer')[0]
+divtimer.innerText=a
+let timer=setInterval(()=>{
+    if(a==0){
+        alert('times up')
+        clearInterval(timer)
+    }
+divtimer.innerText=a--
+},1000)
 
 var str='welcome to our webpage'
 
