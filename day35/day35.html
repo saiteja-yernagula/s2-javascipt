@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    /*
+    callback function 
+    when a function definiton is passed to 
+    another function as a argument 
+    and later execute in outer function 
+
+    callbacks are used when we want to execute tasks
+    one after another
+    
+    function one(callback){
+        console.log('one')
+        callback()
+    }
+    function two(callback){
+        console.log('two')
+        callback()
+    }
+    function three(){
+        console.log('three')
+    }
+    
+    one(()=>{
+        two(()=>{
+            three()
+        })
+    })
+
+ 
+
+
+    10   20   15   30    5
+    
+    function add(val,callback){
+        callback(val+10)
+    }
+    function sub(val,callback){
+        callback(val-5)
+    }
+    function mul(val,callback){
+        callback(val*2)
+    }
+    function div(val,callback){
+        callback(val/6)
+    }
+    
+    add(10,(addres)=>{
+        sub(addres,(subres)=>{
+            mul(subres,(mulres)=>{
+                div(mulres,(divres)=>{
+                    console.log(divres)
+                })
+            })
+        })
+    })
+    
+
+
+    
+    function wakeup(callback){
+        setTimeout(()=>{
+            console.log('waking up')
+            callback()
+        },1000)
+    }
+    function breakfast(callback){
+        setTimeout(()=>{
+            console.log('having breakfast ')
+            callback()
+        },3000)
+    }
+    function institute(){
+        setTimeout(()=>{
+            console.log('starting to the institute')
+        },4000)
+    }
+    
+    wakeup(()=>{
+        breakfast(()=>{
+            institute()
+        })
+    })
+
+    promises
+    it is used to represnent the eventual completion
+    or failure of an asynchronous
+    it is used to overcome callback hell
+
+    pending
+    fullfilled
+    failure
+
+    1) creating a promise 
+    2) consuming a promise - 
+      a) then catch
+      b) async await
+
+
+    
+    
+    */ 
+
+    // creating a promise
+    let a=new Promise(function (resolve,reject){
+        data=11
+        if(data==10){
+            resolve('promise delivered')
+        }
+        else{
+            reject('promise failed')
+        }
+    })
+    // consuming  a promise
+    a.then((res)=>{
+        console.log(res)
+    }).catch((err)=>{
+        console.log(err)
+    })
+    </script>
+</body>
+</html>
