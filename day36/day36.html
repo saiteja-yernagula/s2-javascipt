@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        /*
+        
+        callbacks 
+        callback hell
+        promises
+        
+        
+        */
+// creating a promise
+        function one() {
+            return new Promise((res, rej) => {
+                setTimeout(()=>{
+                    res('one')
+                },4000)
+            })
+        }
+        
+        function two() {
+            return new Promise((res, rej) => {
+                setTimeout(()=>{
+                    res('two')
+                    },2000)
+                    })
+                    }
+        function three() {
+            return new Promise((res, rej) => {
+                setTimeout(()=>{
+                    res('three')
+                },600)
+            })
+        }
+
+        function four() {
+            return new Promise((res) => {
+                setTimeout(()=>{
+                    res('four')
+                    },100)
+            })
+        }
+
+        async function  data(){
+            a=await one()
+            console.log(a)
+            b=await two()
+            console.log(b)
+            c=await three()
+            console.log(c)
+            d=await four()
+            console.log(d)
+        }
+        data()
+        
+        /*
+        // consuming promise individually
+        two().then((r)=>{console.log(r)})
+        one().then((r)=>{console.log(r)})
+        four().then((r)=>{console.log(r)})
+        three().then((r)=>{console.log(r)})
+        
+        //promise chaining
+        one().then((r) =>{
+            console.log(r)
+            return two()
+        }).then((e) => {
+            console.log(e)
+            return three()
+        }).then((s) => {
+            console.log(s)
+            return four()
+        }).then((u) => {
+            console.log(u)
+        }).catch((rej) => {
+            console.log('error found')
+            console.log(rej)
+        })
+        
+        // promise methods
+        //promiseall
+        //it is used to return all the promise at once
+        // it will not execute if there is an rejection
+        Promise.all([one(),two(),three(),four()])
+        .then((res)=>console.log(res))
+        .catch((e)=>console.log(e))
+        
+        //promise.allsettled
+        // it will give you the status about the promised in 
+// array of objects
+Promise.allSettled([one(),two(),three(),four()])
+.then((res)=>console.log(res))
+.catch((e)=>console.log(e))
+
+// promise race
+//it will return the promise value which one
+//completed in shorter time
+Promise.race([one(),two(),three(),four()])
+.then((res)=>console.log(res))
+.catch((e)=>console.log(e))
+*/ 
+
+
+
+function add(val){
+    return new Promise((res)=>{
+        res(val+10)
+    })
+}
+function sub(val){
+    return new Promise((res)=>{
+        res(val-5)
+    })
+}
+
+function mul(val){
+    return new Promise((res)=>{
+        res(val*2)
+    })
+}
+function div(val){
+    return new Promise((res)=>{
+        res(val/6)
+    })
+}
+
+// add(10)
+// .then(addres=>sub(addres))
+// .then(subres=>mul(subres))
+// .then(mulres=>div(mulres))
+// .then(divres=>console.log(divres))
+
+async function getdata(){
+    addres=await add(10)
+    subres=await sub(addres)
+    mulres=await mul(subres)
+    divres=await div(mulres)
+    console.log(divres)
+}
+getdata()
+    </script>
+</body>
+
+</html>
