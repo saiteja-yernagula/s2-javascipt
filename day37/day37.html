@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="container">
+
+    </div>
+    <script>
+        /*
+        promises---promise chaining
+        async await
+
+
+        how to call a api 
+
+        1) using .then.catch
+        */
+        // let data = fetch('https://fakestoreap.com/products/')
+
+        // data.then((res) => { return res.json() })
+        //     .then((finalres) => {
+        //         let container = document.querySelector('.container')
+        //         let products = finalres
+        //         products.forEach((val) => {
+        //             let child = document.createElement('div')
+        //             child.innerHTML = val.title
+        //             container.append(child)
+        //         })
+        //     }).catch((err)=>{
+        //         console.log("error found")
+        //         console.log(err)
+        //     })
+
+
+            async function  getapidata(){
+                let data =await fetch('https://fakestoreapi.com/products/')
+                let finaldata=await data.json()
+                console.log(finaldata)
+                let container = document.querySelector('.container')
+                finaldata.forEach((val) => {
+                    let child = document.createElement('div')
+                    child.innerHTML = val.title
+                    container.append(child)
+                })
+            }
+            getapidata()
+
+    </script>
+
+</body>
+
+</html>
