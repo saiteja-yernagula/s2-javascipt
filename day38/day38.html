@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+
+</head>
+
+<body>
+    <!-- 1) how to get data- get method -->
+
+    <button onclick="getapidata()">get data</button>
+    <button onclick="postdata()">post data</button>
+    <button onclick="putdata()">put-replace the data</button>
+    <button onclick="deldata()">delete</button>
+    <script>
+        async function postdata() {
+            let data = await fetch('http://localhost:3000/students', {
+                method: "POST",
+                headers: {
+                    "Content-type": "application/json"
+                },
+                body: JSON.stringify({
+                    name: "john",
+                    age: 23,
+                    major: "developer"
+                })
+            })
+        }
+
+
+        async function putdata(){
+            let inp=prompt('enter a id to replace')
+            let data =await fetch(`http://localhost:3000/students/${inp}`,{
+                method: 'PATCH',
+                headers:{
+                    'Content-type':'application/json'
+                },
+                body:JSON.stringify({
+                    name:'jessy'
+                })
+            })
+        }
+
+        async function deldata(){
+            let inp=prompt('enter a id to replace')
+            let data = await fetch(`http://localhost:3000/students/${inp}`,{
+                method:"DELETE"
+            })
+        }
+        
+
+        async function getapidata() {
+            let data = await fetch('http://localhost:3000/students')
+            let res = await data.json()
+            console.log(res)
+        }
+
+        /*
+        
+        1) install node js 
+        2) node -v and npm -v
+        3) open powershell run as adiministrator ---
+           Get-ExecutionPolicy
+           Set-ExecutionPolicy RemoteSigned   
+           yes
+           Get-ExecutionPolicy
+        
+        how to create a server
+        1) open folder with a terminal
+         npm init -y
+         npm install -g json-server@0
+         json-server --watch db.json
+        
+         db.json --update our own data
+         {
+          "students":[
+            {
+              "id": 1,
+              "name": "Alice Johnson",
+              "age": 20,
+              "major": "Computer Science"
+            }
+            ]
+            }
+        
+            1) how to get data- get method
+        
+            <button onclick="getapidata()">get data</button>
+         async function getapidata(){
+             let data=await fetch('http://localhost:3000/students')
+             let res=await data.json()
+             res.forEach(val=>console.log(val))
+         }
+        
+         2) how to post data
+        
+        
+        */
+
+
+
+
+
+
+        /*
+        
+        {
+            "students": [
+                { "id": 1, "name": "Teja", "course": "Python", "marks": 90 },
+                { "id": 2, "name": "Ravi", "course": "JavaScript", "marks": 85 },
+                { "id": 3, "name": "Kiran", "course": "React", "marks": 88 },
+                { "id": 4, "name": "Pooja", "course": "Django", "marks": 92 },
+                { "id": 5, "name": "Anil", "course": "Java", "marks": 78 },
+                { "id": 6, "name": "Manoj", "course": "NodeJS", "marks": 81 },
+                { "id": 7, "name": "Sita", "course": "Python", "marks": 95 },
+                { "id": 8, "name": "Rahul", "course": "React", "marks": 89 },
+                { "id": 9, "name": "Hari", "course": "JavaScript", "marks": 76 },
+                { "id": 10, "name": "Deepak", "course": "Django", "marks": 84 }
+            ],
+            
+            "courses": [
+                { "id": 1, "title": "Python Full Stack", "duration": "3 Months" },
+                { "id": 2, "title": "JavaScript Zero to Hero", "duration": "2 Months" },
+                { "id": 3, "title": "React Frontend", "duration": "2 Months" },
+                { "id": 4, "title": "Django Backend", "duration": "3 Months" },
+                { "id": 5, "title": "NodeJS Advanced", "duration": "1.5 Months" }
+            ]
+        }
+        
+        */
+
+
+
+    </script>
+</body>
+
+</html>
