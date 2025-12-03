@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- <button onclick="/console.log(this)">click</button> -->
+    <!-- //current element -->
+
+    <div id="outer">
+        <div id="inner">
+            <button >click</button>
+        </div>
+    </div>
+    <script>
+  document.getElementById('outer').addEventListener('click',()=>{
+       console.log('outer is triggered')
+        })
+ document.getElementById('inner').addEventListener('click',()=>{
+     console.log('inner is triggered')
+        })
+
+// stopping the event bubbling
+// document.getElementById('outer').addEventListener('click',()=>{
+//        console.log('outer is triggered')
+//         })
+ let a=document.getElementById('inner')
+ a.addEventListener('click',(e)=>{
+    e.stopPropagation()
+     console.log('inner is triggered')
+  })
+
+//event capturing
+document.getElementById('outer').addEventListener('click',()=>{
+       console.log('outer is triggered')
+        }, )
+ document.getElementById('inner').addEventListener('click',()=>{
+     console.log('inner is triggered')
+        })
+
+        /*
+
+        
+        */ 
+    //    console.log('first')
+
+    //    try{
+    //     a=new Array(-1)
+    //     console.log(a)
+    //    }catch(err){console.log(err)}
+
+    //    console.log('third')
+
+
+/*
+
+// this it is used to represent the current calling object
+console.log(this)//window-at global level
+
+function greet(){
+    console.log(this)//window
+}
+greet()
+
+let obj={
+    stdname:'john',
+    age:20,
+    details:function(){
+        console.log(this)//obj
+        console.log(this.age)//20
+    },
+    details2:()=>{
+        console.log(this)
+        //window--arrow function doent have
+        //own this content-they inherit from the parent
+    }
+}
+obj.details()
+
+
+// methods to manipulate this keyword
+function details(city,role){
+ console.log(this.stdname,this.age,city,role)
+}
+let obj={
+    stdname:'john',
+    age:20
+}
+// details()//window
+// details.call(obj,'hyd')//object
+// details.apply(obj,['hyd','developer'])
+let d=details.bind(obj,'hyd','trainer')
+d()
+
+*/ 
+
+    </script>
+</body>
+</html>
