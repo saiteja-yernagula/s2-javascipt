@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+    /*
+    oops- 
+    object oriented programming structure
+    it is way of writing a code in more modular 
+    and reusable manner
+
+    class -it is a used to define a template of an object
+        it is used to define the state(properties) 
+        and (methods) behaviour
+
+    class  Classname{
+    property1
+    propety2
+    property3
+    //it is used to initialize the properties and it will
+    // invoke immediately whenever the object is create
+    constructor(param1 ,param2 ,param3){
+    this.property1=param1
+    this.property2=param2
+    this.property3=param3
+    }
+
+    method(){
+    //code 
+    }
+    }
+
+    instance of class
+    let obj=new Classname('arg1','arg2','arg3')
+    console.log(obj)
+    */ 
+    class Marker{
+        type;
+        color;
+        lid;
+        constructor(param1,param2,param3){
+            this.type=param1
+            this.color=param2
+            this.lid=param3
+        }
+        writing(){
+console.log('iam writing with',this.type ,' and color is ', this.color)
+        }
+    }
+    
+    let obj=new Marker('permanent','black','square')
+    console.log(obj.type)
+    console.log(obj.color)
+    obj.writing()
+
+    let obj2=new Marker('temp','red','circle')
+    console.log(obj2.type)
+    console.log(obj2.color)
+    obj2.writing()
+
+    </script>
+</body>
+</html>
