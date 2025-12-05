@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /*
+
+        oops
+        class
+        object 
+
+  
+        inheritance
+        polymorphism
+        abstraction
+
+
+        encapsulation- 
+ bundling the properties(hiding) and
+  showing necessary data only
+  class Employe{
+    name
+    role
+    #salary //private field
+    constructor(name,role,salary){
+        this.name=name
+        this.role=role
+        this.#salary=salary
+    }
+    
+    get getsal(){
+        return this.#salary
+            }
+
+            set setsal(sal){
+                this.#salary=sal
+            }
+        }
+        
+let person1=new Employe('john','developer','1000000')
+console.log(person1.name)
+
+person1.role='senior developer'
+person1.setsal=5000000
+console.log(person1.role)
+console.log(person1.salary)//undefined - private field
+console.log(person1.getsal)
+
+
+inheritance
+it is used to get the method and properties from
+parent to child*/ 
+class Animal{
+    weight
+    height
+    constructor(weight,height){
+        this.weight=weight
+        this.height=height
+    }
+
+    details(){
+        console.log(this.weight , ' and ', this.height)
+    }
+}
+
+class Dog extends Animal{
+    breed
+    purpose
+    constructor(weight,height,breed,purpose){
+        //it is used to initialize the parent properties
+        super(weight,height)
+        this.breed=breed
+        this.purpose=purpose
+    }
+
+    details(){
+        console.log(this.breed ,'having a weight of ', this.weight , ' and ', 'height of ', this.height)
+    }
+}
+let obj=new Animal('100kgs','9feet')
+console.log(obj)
+obj.details()//it calls the parent method
+
+let childobj=new Dog('25kgs', '3feet', 'pumerian', 'playfull')
+console.log(childobj)
+
+childobj.details()//it calls the child method and overrides
+             //the parent method
+/*
+polymorphism - one thing many forms
+it allows us to define same method in different classes
+that behaves differently based on the object they are
+called
+
+class Animal{
+    details(){
+        console.log(this.weight , ' and ', this.height)
+    }
+}
+
+class Dog extends Animal{
+    details(){
+console.log(this.breed ,'having a weight of ', this.weight , ' and ', 'height of ', this.height)
+    }
+}
+
+let obj=new Animal('100kgs','9feet')
+obj.details()//it calls the parent method
+
+let childobj=new Dog('25kgs', '3feet', 'pumerian', 'playfull')
+childobj.details()//it calls the child method and overrides
+             //the parent method
+
+Abstraction
+it is process of hiding the  complex
+implemention
+*/ 
+</script>
+</body>
+</html>
