@@ -6,8 +6,63 @@
     <title>Document</title>
 </head>
 <body>
-    <script >
+    <script type="module" >
+/*
 
+Modules :-
+modules are reusable pieces of code that encapsulate related 
+functionality and can be exported from one file and 
+imported into another. This allows for better organization, maintainability, and reusability 
+
+// default export
+export default function demo(){
+    console.log("default func-This is a demo function from day42/demo.js");
+}
+
+// default import
+import deo from './demo.js';
+deo();
+
+// named export 
+function fun1(){
+    console.log("named func-This is a named function from day42/demo.js");
+}
+function fun2(){
+    console.log("named func-This is another named function from day42/demo.js");
+}
+export {fun1,fun2};
+
+named import
+import {fun1, fun2} from './demo.js';
+
+
+
+*/ 
+// import deo from './demo.js';
+// import {fun1, fun2} from './demo.js';
+// deo();
+// fun1();
+// fun2();
+
+let data=new Set([11,11,11])
+
+data.add(10)
+data.add(10)
+data.add('john')
+data.add('john')
+// data.delete('john')
+// data.clear()
+console.log(data.size)
+console.log(data.has(10))//true
+console.log(data.has(20))//false
+
+console.log(data.values())
+console.log(data.keys())
+console.log(data.entries())
+
+data.forEach((val)=>{
+    console.log(val)
+})
     </script>
     
 </body>
